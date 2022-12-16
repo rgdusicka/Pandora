@@ -1,13 +1,13 @@
 {% extends 'layouts/base.html' %}
 
 {% block content %} 
-<h>Create a new task</h>
+<h>Crear nuevo Post</h>
 
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
     <button>
-        Save
+        Publicar
     </button>
 </form>
 

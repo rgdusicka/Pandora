@@ -1,2 +1,4 @@
 django==2.4.3
+-U django-jazzmin
 python-decouple==3.6
+Pillow==8.4.0

@@ -9,9 +9,10 @@ class Project(models.Model):
 
 class Task(models.Model):
     tittle =  models.CharField(max_length=200)
-    description = models.TextField()    
+    description = models.TextField(max_length=500, blank=False, null=False)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
-    done = models.BooleanField(default=False)
+    done = models.BooleanField(default=True)
+    fecha_creacion = models.DateTimeField( auto_now_add = True)
 
     def __str__(self):
         return self.tittle + ' - ' + self.project.name

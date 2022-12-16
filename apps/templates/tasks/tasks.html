@@ -1,24 +1,26 @@
 {% extends 'layouts/base.html' %}
-
+{% load static %}
 {% block content %}
 
-<h1>Tasks</h1>
+<h1>Posteos</h1>
 
 {% for task in tasks %}
 
-<div>
-    <h1> {% if task.done == False %}⏳{% else %}✅{% endif %}{{task.tittle}}</h1>
-
-
-    <p>{{task.description}}</p>
-    <p>Project: {{task.project.name}}</p>
-    <button>
-        Delete
-    </button>
-    <button>
-        ✅ Done
-    </button>
-<div>
-
+<div class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">{{task.tittle}}</h5>				
+			</div>
+			<div class="modal-body">
+				<p>{{task.description}}</p>
+			</div>
+			<div class="modal-footer">
+				<p>{{task.fecha_creacion}}</p>
+			</div>
+		</div>
+	</div>
+</div>
 {% endfor %}
+
 {% endblock %}
