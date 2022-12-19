@@ -6,21 +6,22 @@
 
 {% for task in tasks %}
 
-<div class="modal" tabindex="-1" role="dialog">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">{{task.tittle}}</h5>				
+<div class="vLargeTextField" tabindex="-1" role="dialog">
+	<div role="document">
+		<div>
+			<div>
+				<h2>{{task.tittle}}</h2>
 			</div>
-			<div class="modal-body">
+			<div>
 				<p>{{task.description}}</p>
 			</div>
-			<div class="modal-footer">
-				<p>{{task.fecha_creacion}}</p>
+			<div>
+				<p><br>{{task.fecha_creacion}}</p>
 			</div>
 		</div>
 	</div>
 </div>
+<p></p>
 {% endfor %}
 
 {% endblock %}

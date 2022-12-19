@@ -6,9 +6,16 @@
 {% for task in tasks %}
 
 <div class="card">
-    <h1>{{task.tittle}}</h1>
+    <div class="modal-header">
+        <b><h2>{{task.tittle}}</h2></b>
+    </div>
+    <div class="modal-body">
+        <p>{{task.description}}</p>
+    </div>
+    <div class="modal-footer">
+        <p>{{task.fecha_creacion}}</p>
+    </div>
 </div>
-
 {% endfor %}
 
 {% endblock %}
