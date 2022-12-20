@@ -1,0 +1,62 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/logo_bomberos.ico' %}" type="image/x-icon"/>
+    <title>Login</title>
+
+    <!-- Fonts and icons -->
+    <script src="{% static 'js/plugin/webfont/webfont.min.js' %}"></script>
+
+    <!-- CSS Files -->
+	<link rel="stylesheet" href="{% static 'styles/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'styles/atlantis.min.css' %}">
+</head>
+<body>    
+    {% if form.errors %}
+
+        <div class="card text-center mx-auto" style="width: 20rem; align:center" role="alert">
+             <div class="card-body">
+                <h4 class="text-danger"><strong>Error de login!</strong></h4>
+                <p class="mensaje">Usuario o contraseña incorrecto</p>
+                <p class="mensaje">Ambos campos son sensibles a mayúsculas/minúsculas</p>
+                <a href="{% url 'login' %}" class="btn btn-danger">Aceptar</a>
+            </div>
+        </div>
+    {%endif%}
+    <p></p>    
+    <div class=" card text-center mx-auto" style="width: 22rem;">
+        <div class="card-body" >
+            <h5 class="card-title mb-2 fw-mediumbold">Login</h5>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group text-left">
+                    <label for="exampleInputPassword1">Usuario</label>
+                    <span class="input-icon-addon">
+                    <i class="fa fa-user"></i></span>
+                    {{form.username}}
+                    
+                </div>
+                <div class="form-group text-left">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    {{form.password}}
+                </div>
+                <p></p>
+                <div class="input-icon">
+                <button type="submit" class="btn btn-danger">Login</button>
+                </div>
+            </form>
+            <p></p>
+            <a href="{% url 'registro' %}" >Resgistrame</a>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

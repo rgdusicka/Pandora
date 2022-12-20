@@ -1,14 +1,48 @@
 {% extends 'layouts/base.html' %}
-
-
 {% block content %}
-
 {% load static %}
 
-<h1>{{ title }}</h1>
+<h1>Servicios prestados en forma voluntaria a la comunidad</h1>
 
-<img src="{% static 'meme.jpg' %}" alt="" width="70">
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolores quam, molestiae voluptatem consectetur vitae ea nisi? Blanditiis iure illo atque doloremque cumque aliquam consequuntur excepturi laboriosam corporis ipsa! Dolore..</p>
+<div class="container">
+    <div class="row">
+    
+    <div class="col">
+        <img class="card-img-top" src="{% static 'img/row1.jpg' %}" width="250" height="300">
+        <h2>INCENDIOS</h2>
+        Entre la gran variedad de servicios que prestan las instituciones de bomberos voluntarios, podemos destacar a los servicios de incendios. Este tipo de servicio, es uno de los mas frecuentes en los que deben trabajar los bomberos voluntarios, siendo una actividad de mucho riesgo, que requiere una capacitación permanente y un alto grado de profesionalismo de todo el personal. Se destacan entre los servicios de incendios, los incendios estructurales, de vehículos y los forestales.
+        </div>
+    <div class="col">
+        <img class="card-img-top" src="{% static 'img/row2.jpg' %} " width="250" height="300">
+        <h2>AUXILIOS</h2>
+        En la gran mayoría de los servicios de auxilio, se encuentra en riesgo la vida de las personas. Este tipos de servicio requiere de una respuesta rápida y eficiente, con la finalidad de poder preservar la vida de las víctimas. Para ello, nuestro Cuerpo de Bomberos cuenta con personal altamente experimentado y capacitado, permitiendo además de realizar las maniobras de rescate, poder brindar una atención pre-hospitalaria acorde a las circunstancias      </div>
+    <div class="col">
+        <img class="card-img-top" src="{% static 'img/row3.jpg' %} " width="250" height="300">
+        <h2>DESASTRES</h2>
+        Brindamos respuesta a situaciones de gran magnitud, que requieren disponer de un alto nivel de organización y coordinación entre diversas instituciones de Bomberos Voluntarios de la región, trabajando en conjunto con otros organismos como Defensa Civil, SAME Provincia y las Fuerzas Públicas de Seguridad, con la finalidad de salvaguardar la vida de las personas y sus bienes materiales.      </div>
+    </div>
+</div>
+</div>
+<p></p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <img class="card-img-top" src="{% static 'img/row4.jpg' %}" width="250" height="300">
+        <h2>CAPACITACIÓN</h2>
+        La capacitación es la base fundamental de un trabajo profesional, por eso acercamos todos nuestros conocimientos para que la comunidad pueda tomar un rol activo ante situaciones de emergencias. Las instituciones educativas son las principales receptoras de estas capacitaciones para los niños en edad escolar.
+        </div>
+        <div class="col">
+        <img class="card-img-top" src="{% static 'img/row5.jpg' %}" width="250" height="300">
+        <h>CEREMONIAL</h>
+        Nuestra institución participa de los actos conmemorativos que se realizan en nuestra jurisdicción y a nivel provincial, representando por medio del Cuerpo Activo a los Bomberos Voluntarios de Matanza. Es un gran orgullo institucional ser parte de los eventos que conmemoran los hechos históricos más importantes de nuestro país, tanto a nivel local como nacional
+        </div>
+        <div class="col">
+        <img class="card-img-top" src="{% static 'img/row6.jpg' %}" width="250" height="300">
+        <h2>MATERIALES PELIGROSOS<br>
+        (MAT-PEL / HAZMAT)</h2>
+        En muchas industrias, viviendas o en la vía pública podemos encontrar sustancias inflamables, tóxicas o riesgosas, donde los bomberos voluntarios, su entrenamiento y equipamiento resultan vitales. Es por ello, que nuestro cuerpo de bomberos voluntarios se capacita y entrena de forma constante para poder dar respuesta a los servicios donde se ven involucrados materiales peligrosos.
+        </div>
+    </div>
+</div>
 
 {% endblock %}
